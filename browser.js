@@ -2,10 +2,10 @@
 
 'use strict'
 
-const arrayBufferToHex = require('array-buffer-to-hex')
+var arrayBufferToHex = require('array-buffer-to-hex')
 
 module.exports = function randomHex (bytes) {
-  const view = new Uint8Array(bytes)
+  var view = new Uint8Array(bytes)
 
   if (typeof crypto === 'object' && typeof crypto.getRandomValues === 'function') {
     crypto.getRandomValues(view)
